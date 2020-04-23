@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test - Ivana Tijanic</title>
+</head>
+
+<body>
+    <div class="loader">
+        <p class="loader_text">Your account is being made, please wait.</p>
+        <img src="loader.gif" alt="Loading...">
+    </div>
+    <section class="full-main">
+        <div>
+            <div class="welcome-msn">
+                <div class="msn">
+                    <h1>Welcome!</h1>
+                    <h3>We hope you enjoy your stay!</h3>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="log-reg">
+                <div class="promo-code">
+                    <p class="promo"></p>
+                </div>
+                <div class="tab-log-reg">
+                    <button class="tab-email tablinks active" onclick="openTab(event, 'email')">Register by
+                        email</button>
+                    <button class="tab-mob tablinks" onclick="openTab(event, 'mobile')">Register by phone
+                        number</button>
+                </div>
+                <div id="email" class="tabcontent">
+                    <form action="action_page.php" id="form_email" method="POST">
+                        <!-- onsubmit="return validateEmail();" -->
+                        <p class="fill-form">Please fill in this form to create an account.</p>
+
+                        <div class="container">
+                            <fieldset>
+                                <label><b>Email</b></label><br>
+                                <input class="form__input" id="input__email" type="text" placeholder="Email address"
+                                    name="email"><br><small class="input_small email__small"></small><small
+                                    class="input_small email__small_corect"></small>
+                                <p class="currency"><b>Select desired currency</b></p>
+                                <div class="radios">
+                                    <input type="radio" id="dollar" name="currency" value="dollar" checked>
+                                    <label for="dollar">$</label><br>
+                                    <input type="radio" id="euro" name="currency" value="euro">
+                                    <label for="euro">€</label><br>
+                                    <input type="radio" id="rsd" name="currency" value="rsd">
+                                    <label for="rsd">RSD</label>
+                                </div>
+                                <p class="form__term"> <input class="input__checkbox" id="checkbox_email"
+                                        type="checkbox" checked="checked" name="agreed">By
+                                    creating an account you agree
+                                    to our <a href="#" class="custom_atag">Terms & Privacy</a>.</p><small
+                                    class="input_small email_checkbox_small"></small>
+
+                                <button type="submit" class="registerbtn" id="loading_email">Register</button>
+                            </fieldset>
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div id="mobile" class="tabcontent">
+                    <form action="action_page.php" id="form_mobile" method="POST">
+                        <p class="fill-form">Please fill in this form to create an account.</p>
+
+                        <div class="container">
+                            <fieldset>
+                                <label><b>Phone number</b></label>
+                                <input class="form__input" id="input_mobile" type="text" placeholder="Your phone number"
+                                    name="mobile">
+                                <small class="input_small mobile__small"></small><small
+                                    class="input_small mobile__small_correct"></small>
+                                <p class="currency"><b>Select desired currency</b></p>
+                                <div class="radiosMobile">
+                                    <input type="radio" id="dollar2" name="currency" value="dollar2" checked>
+                                    <label for="dollar2">$</label><br>
+                                    <input type="radio" id="euro2" name="currency" value="euro2">
+                                    <label for="euro2">€</label><br>
+                                    <input type="radio" id="rsd2" name="currency" value="rsd2">
+                                    <label for="rsd2">RSD</label>
+                                </div>
+
+
+                                <p class="form__term"> <input class="input__checkbox" id="checkbox_mobile"
+                                        type="checkbox" checked="checked" name="agreed">By
+                                    creating an account you agree
+                                    to our <a href="#" class="custom_atag">Terms & Privacy</a>.</p><small
+                                    class="input_small mobile_checkbox_small"></small>
+
+
+                                <button type="submit" class="registerbtn">Register</button>
+                            </fieldset>
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
