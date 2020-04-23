@@ -263,6 +263,7 @@ fieldset {
     }
     .registerbtn {
         float: unset;
+        margin-bottom:15px;
     }
     .loader {
         position: initial;
